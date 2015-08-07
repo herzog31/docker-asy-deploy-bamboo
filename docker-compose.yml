@@ -1,0 +1,11 @@
+asydeploy:
+  image: herzog31/bamboo-asy-deploy:latest
+  environment:
+    - bambooAPI=https://yourbamboo.instance/rest/api/latest
+    - bambooBuildPlan=BUILDPLANKEY
+    - bambooUser=yourUsername
+    - bambooPassword=yourPassword
+    - bambooArtifactName=Repository
+    - bambooYML=compose.yml
+  volumes:
+    - /var/run/docker.sock:/var/run/docker.sock
