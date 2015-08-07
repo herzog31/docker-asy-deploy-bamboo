@@ -1,8 +1,8 @@
 FROM miek/alpine-armv6l
 
+MAINTAINER Mark J. Becker <mjb@marb.ec>
+
 RUN apk --update add openssl ca-certificates unzip curl py-pip py-yaml
-# RUN curl -L https://github.com/hypriot/compose/releases/download/1.2.0-raspbian/docker-compose-Linux-armv6l > /usr/bin/docker-compose
-# RUN chmod +x /usr/bin/docker-compose
 RUN pip install -U docker-compose
 
 RUN mkdir /deploy-root
